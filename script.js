@@ -43,7 +43,7 @@ updateTop();window.addEventListener('scroll',updateTop,{passive:true});
 topButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduce?'auto':'smooth'}));
 
 if(!reduce&&window.matchMedia('(pointer:fine)').matches){
- document.querySelectorAll('.pillar,.mini-post,.featured-post').forEach(card=>{
+ document.querySelectorAll('.pillar,.mini-post,.featured-post,.team-member').forEach(card=>{
   card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',`${e.clientX-r.left}px`);card.style.setProperty('--my',`${e.clientY-r.top}px`);});
  });
 }
